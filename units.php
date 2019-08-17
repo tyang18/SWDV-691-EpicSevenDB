@@ -42,7 +42,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="gameplay.html">Gameplay</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link active" href="units.html">Units</a>
                 </li>
                 <li class="nav-item">
