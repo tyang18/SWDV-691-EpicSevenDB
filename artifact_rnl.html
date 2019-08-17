@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Epic Seven DB</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="less/style.css" >
+    <link rel="stylesheet" href="css/style.css">
+            
+    <!--Start of Mustache.js-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> 
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+  </head>
+  
+  <body onload="loadUser()">
+
+    <!--FACEBOOK SDK-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+
+    <!--Sticky Navigation Bar-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" role="img">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gameplay.html">Gameplay</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="units.php">Units</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="artifacts.html">Artifacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tier.html">Tier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="other.html">Other</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <!--Banner Image-->
+    <div class="banner-image" role="img">
+        <img class="center-fit" src="img/banner.png">
+    </div>
+
+    <!--Download link-->
+    <div class="container-fluid">
+    <div class="row jumbotron text-center">
+        <div class="col-12">
+            <a href="https://itunes.apple.com/us/app/epic-seven/id1322399438?mt=8"><button type="button" class="btn btn-outline-secondary">Install the Game</button></a>
+        </div>
+    </div>
+    </div>
+
+    <!--For now, I will be manually adding images, and information about units-->
+    <!--In the future, I will add a db for further filtering and unit search-->
+    <!--Main Section 1-->
+    <div class="container-fluid">
+    <div class="row main-window">
+    
+        <!--About Section-->
+        <div class="container-fluid">
+        <div class="row main">
+            <div class="col-12">
+                <!--Main container-->
+                <h2>Rhianna & Luciella</h2>
+                <!--Main Infor Container-->
+                <div class="col-12">
+                    <!--Splits the Container in 2-->
+                    <div class="row padding">
+                        <!--Text Container-->
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <p>
+                            <!--Avatar Image-->
+                            <img src="img/rnl-image.png" class="img-fluid mx-auto d-block" role="img">
+                            </p>    
+                        </div>
+
+                        <!--Basic Info Container-->
+                        <div class="col-sm-12 col-md-8 col-lg-9">
+
+                            <h4>Lore</h4>
+
+                            <p>
+                                You're today's target. I'll let you know now that there's nowhere to run.
+
+                                - Moon Assassins, Rhianna and Luciella
+                            </p>
+
+                            <br>
+
+                            <table class="table table-light" role="table" >
+                   
+                                <!--Hides the left 3 column upon smaller window-->
+                                <thead class="thead-dark">
+                                    <!--Row 1-->
+                                    <tr>
+                                    <th scope="col" style="width: 50%">Star Grade</th>
+                                    <th scope="col" style="width: 50%" class="d-none d-sm-table-cell">Class Specific</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <th scope="row">
+                                        <h2>&#9734&#9734&#9734&#9734&#9734</h2>
+                                    </th>
+                                    <td class="d-none d-sm-table-cell">
+                                        <img src="img/thief.PNG" class="img-fluid mx-auto d-block d-sm-block" role="img">
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!--Stats Container-->
+                            <table class="table table-hover table-bordered table-light" role="table" >
+                   
+                                <!--Hides the left 3 column upon smaller window-->
+                                <thead class="thead-dark">
+                                    <!--Row 1-->
+                                    <tr>
+                                    <th scope="col" style="width: 33.33%">Level </th>
+                                    <th scope="col" style="width: 33.33%" >Attack</th>
+                                    <th scope="col" style="width: 33.33%" class="d-none d-sm-table-cell">Health</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <th scope="row">
+                                        Base Stats (+0)
+                                    </th>
+                                    <td>
+                                        21
+                                    </td>
+                                    <td class="d-none d-sm-table-cell">
+                                        32
+                                    </td>
+                                    </tr>
+
+                                    <!--Row 2-->
+                                    <tr>
+                                    <th scope="row">
+                                        Max Level Stats (+30)
+                                    </th>
+                                    <td>
+                                        273
+                                    </td>
+                                    <td class="d-none d-sm-table-cell">
+                                        416
+                                    </td>
+                                    </tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!--Skill Container-->
+                            <table class="table table-hover table-bordered table-light" role="table" >
+                   
+                                <!--Hides the left 3 column upon smaller window-->
+                                <thead class="thead-dark">
+                                    <!--Row 1-->
+                                    <tr>
+                                    <th scope="col" style="width: 50%">Level </th>
+                                    <th scope="col" style="width: 50%">Skill</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <th scope="row">
+                                        Base Skill Level (lv1, +0)
+                                    </th>
+                                    <td>
+                                        10.0% chance to be granted an extra turn at the end of the turn. Can be activated once per turn.
+                                    </td>
+                                    </tr>
+
+                                    <!--Row 2-->
+                                    <tr>
+                                    <th scope="row">
+                                        Max Skill Level (lv10, +30)
+                                    </th>
+                                    <td>
+                                        20.0% chance to be granted an extra turn at the end of the turn. Can be activated once per turn.
+                                    </td>
+                                    </tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+    </div>
+    </div>
+
+
+    <br>
+    <br>
+
+    <!--Fixed Image Background-->
+    <figure>
+        <div class="fixed-wrap">
+            <div id="fixed">
+            </div>
+        </div>
+    </figure>
+
+
+
+    <!--Footer-->
+    <footer>
+        <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-12">
+                <ul class="footer-list" style="list-style-type:none">
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>&copy; Tou Yang</h5>
+            </div>
+        </div>    
+        </div>
+    </footer>
+
+    </body>
+</html>

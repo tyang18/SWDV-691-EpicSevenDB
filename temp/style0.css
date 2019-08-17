@@ -1,0 +1,163 @@
+/* for all paragraphs */
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*for all 3 headers */
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/* body margin */
+body {
+  margin:0;
+}
+
+/* mainly used for the navigation bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* mainly used for the navigation bar */
+li {
+  float: left;
+}
+
+/* mainly used for the navigation bar */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* mainly used for the navigation bar */
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/* mainly used for the navigation bar */
+.active {
+  background-color: rgb(31, 74, 109);
+}
+
+/* formats footer */
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* formats main table */
+.char-table, .char-tr, .char-th {
+  border: 1px solid black;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white; 
+}
+
+/* formats inner table */
+.info-table, .info-tr, .info-th {
+  border: 1px solid black;
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white; 
+}
+
+/* formats inner-inner table */
+.skill-table, .skill-tr, .skill-th {
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black; 
+}
+
+/* formats inner-inner-inner table */
+.smaller-table, .smaller-tr, .smaller-th {
+  border: 1px solid black;
+  text-align: left;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white; 
+}
+
+/* fixed background */
+.background {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* formats left division box */
+.left-outerlay {
+  float: left;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px; 
+  width: 25%;
+  height: auto;  
+}
+
+/* formats right division box */
+.right-outerlay {
+  float: right;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px; 
+  width: 65%;
+  height: auto;  
+}
+
+/* formats the slider */
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 50%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(31, 74, 109); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* as mentioned above - for other browsers */
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: rgb(31, 74, 109); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

@@ -1,0 +1,213 @@
+/* LESS */
+/*---VARIABLES---*/
+/* HTML and BODY */
+/* NAVIGATION BAR */
+/* BANNER IMAGE and CAROUSEL */
+/* BUTTON and JUMBOTRON */
+/* WELCOME and HEADER */
+/* WINDOW */
+/* FOOTER */
+/*---STYLE---*/
+/* HTML and BODY */
+.default {
+  height: 100;
+  width: 100;
+  font-family: "Poppins" sans-serif;
+  color: #222222;
+}
+.html {
+  height: 100;
+  width: 100;
+  font-family: "Poppins" sans-serif;
+  color: #222222;
+}
+.html .body {
+  height: 100;
+  width: 100;
+  font-family: "Poppins" sans-serif;
+  color: #222222;
+}
+.html .main {
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #ebebeb;
+  border: 1px solid #bdbdbd;
+}
+/* NAVIGATION BAR */
+.navbar {
+  padding: 0.8rem;
+}
+.navbar .nav-bar li {
+  padding-right: 20px;
+}
+.navbar .nav-link {
+  font-size: 1.1em !important;
+}
+/* BANNER IMAGE and CAROUSEL */
+.banner-image img {
+  width: 100%;
+  height: 100%;
+}
+.banner-image img .carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.banner-image img .carousel-active {
+  background-color: #3a3a3a;
+}
+/* BUTTON and JUMBOTRON */
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #563d7c;
+}
+.btn-primary .jumbotron {
+  padding: 1em;
+  border-radius: 0;
+}
+/* WELCOME and HEADER */
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.welcome .welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+/* WINDOW */
+.main-window {
+  width: 90%;
+  margin: auto;
+  padding-top: 2rem;
+}
+.main-window .main-window-x {
+  width: 80%;
+  margin: auto;
+  padding-top: 1rem;
+}
+/* FOOTER */
+.footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+.footer .footer a {
+  color: #d5d5d5;
+}
+/*---ORIGINAL---*/
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+/*---MEDIA QUERIES---*/
+@media (max-width: 992px) {
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 200%;
+  }
+  .social a {
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 160%;
+  }
+  .social a {
+    font-size: 2em;
+    padding: 0.7rem;
+  }
+}
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+ul {
+  padding-left: 50px;
+  list-style-type: disc;
+}
+.footer-list {
+  font-size: 80%;
+}
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Epic Seven DB</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="less/style.css" >
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--Start of Mustache.js-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> 
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+  </head>
+  
+  <body>
+
+    <!--FACEBOOK SDK-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+
+
+    <!--Sticky Navigation Bar-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" role="img">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gameplay.html">Gameplay</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="units.html">Units</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="artifacts.html">Artifacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tier.html">Tier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="other.html">Other</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <!--Banner Image-->
+    <div class="banner-image" role="img">
+        <img class="center-fit" src="img/banner.png">
+    </div>
+
+    <!--Download Link-->
+    <div class="container-fluid">
+        <div class="row jumbotron text-center">
+            <div class="col-12">
+                <a href="https://itunes.apple.com/us/app/epic-seven/id1322399438?mt=8"><button type="button" class="btn btn-outline-secondary">Install the Game</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--For now, I will be manually adding images, and information about units-->
+    <!--In the future, I will add a db for further filtering and unit search-->
+    <!--Main Section 1-->
+    <div class="container-fluid">
+    <div class="row main-window">
+    
+        <!--About Section-->
+        <div class="container-fluid">
+        <div class="row main">
+            <div class="col-12">
+                <!--Main container-->
+                <h2>Unit Information</h2>
+                <table class="table table-hover table-bordered table-light" role="table" >
+                    <!--Hides the left 3 column upon smaller window-->
+                    
+                    <thead>
+                        <!--Row 1-->
+                        <tr>
+                        <th scope="col">Portrait</th>
+                        <th scope="col">Name</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Element</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Class Type</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Zodiac Sign</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">
+                            <a class="nav-link" href="unit_ken.html"><img src="img/ken-portrait.png" class="img-fluid mx-auto d-block" role="img"></a>
+                        </th>
+                        <td>
+                            <a class="nav-link" href="unit_ken.html">Ken</a>
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/fire.png" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/warrior.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/capricorn.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        </tr>
+
+                        <!--Row 2-->
+                        <tr>
+                        <th scope="row">
+                            <a class="nav-link" href="unit_sez.html"><img src="img/sez-portrait.png" class="img-fluid mx-auto d-block" role="img"></a>
+                        </th>
+                        <td>
+                            <a class="nav-link" href="unit_sez.html">Sez</a>
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/ice.png" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/thief.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/scorpio.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        </tr>
+
+                        <!--Row 3-->
+                        <tr>
+                        <th scope="row">
+                            <a class="nav-link" href="unit_iseria.html"><img src="img/iseria-portrait.png" class="img-fluid mx-auto d-block" role="img"></a>
+                        </th>
+                        <td>
+                            <a class="nav-link" href="unit_iseria.html">Iseria</a> 
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/earth.png" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/ranger.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/leo.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        </tr>
+
+                        <!--Row 5-->
+                        <tr>
+                        <th scope="row">
+                            <a class="nav-link" href="unit_krau.html"><img src="img/krau-portrait.png" class="img-fluid mx-auto d-block" role="img"></a>
+                        </th>
+                        <td>
+                            <a class="nav-link" href="unit_krau.html">Krau</a>
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/ice.png" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/knight.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/pisces.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        </tr>
+
+                        <!--Row 6-->
+                        <tr>
+                        <th scope="row">
+                            <a class="nav-link" href="unit_bellona.html"><img src="img/bellona-portrait.png" class="img-fluid mx-auto d-block" role="img"></a>
+                        </th>
+                        <td>
+                            <a class="nav-link" href="unit_bellona.html">Bellona</a>
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/earth.png" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/ranger.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/capricorn.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>  
+    </div>
+    </div>
+
+    <br>
+    <hr class="my-4">
+
+    <div class="container-fluid">
+    <div class="row main-window">
+    <!--About Section-->
+        <div class="container-fluid">
+        <div class="row main">
+            <div class="col-12">
+                <!--Main container-->
+                <h2>Limited Unit Information</h2>
+                <table class="table table-hover table-bordered">
+                    <!--Hides the left 3 column upon smaller window-->
+                    
+                    <thead>
+                        <!--Row 1-->
+                        <tr>
+                        <th scope="col">Portrait</th>
+                        <th scope="col">Name</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Element</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Class Type</th>
+                        <th scope="col" class="d-none d-sm-table-cell">Zodiac Sign</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--Row 2-->
+                        <tr>
+                        <th scope="row">
+                            <a class="nav-link" href="unit_diene.html"><img src="img/diene-portrait.png" class="img-fluid mx-auto d-block" role="img"></a>
+                        </th>
+                        <td>
+                            <a class="nav-link" href="unit_diene.html">Diene</a>
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/ice.png" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/soulweaver.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        <td class="d-none d-sm-table-cell">
+                            <img src="img/gemini.PNG" class="img-fluid d-none d-sm-block" role="img">
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+
+    <!--Fixed Image Background-->
+    <figure>
+        <div class="fixed-wrap">
+            <div id="fixed">
+            </div>
+        </div>
+    </figure>
+
+
+
+    <!--Footer-->
+    <footer>
+        <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-12">
+                <ul class="footer-list" style="list-style-type:none">
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>&copy; Tou Yang</h5>
+            </div>
+        </div>    
+        </div>
+    </footer>
+
+  </body>
+</html>
