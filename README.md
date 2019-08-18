@@ -1,7 +1,9 @@
 # SWDV-691-EpicSevenDB
 EpicSevenDB Github
+
 Project website is written in HTML and PHP utilizing CSS, Javascript and Mustache. 
-Website: http://71.95.69.224/
+
+**Website:** http://71.95.69.224/
 
 ## Design Folder Navigation
 
