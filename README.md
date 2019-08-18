@@ -10,11 +10,9 @@ This folder contains the Database ande Service Layer Documentations
 This folder contains the Storyboard and Wireframe Documentations
 
 
-## Project Folder
+## Projec
 
-### UI Website
-This folder contains the main UI for the project website written in HTML, CSS, and Javascript
+### WAMP Server
+Project website is written in HTML and PHP utilizing CSS, Javascript and Mustache. 
 
-The whole Project folder contains the webpages and assets to be used.
-
-ToDo: Refine the webpage, collect more assets, mysql database connection.
+Website: http://71.95.69.224/
