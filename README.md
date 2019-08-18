@@ -20,11 +20,11 @@ Main page of the website
 ### Units.php
 The MVP of the project and contains a sortable table that connects back to the MySQL database. 
 
-## Artifacts.php
+### Artifacts.php
 Similar to the Units page
 
-## Inserts.php
+### Inserts.php
 This page allows for the user to insert units and images into the database. This autopopulates the table on the Units page. 
 
-## Other.php
+### Other.php
 This page has links to various third party tools and websites that provide more information and tools for the game. 
