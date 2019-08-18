@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/mustache.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
+    <link href="/YOUR_PATH/e7icon.ico" rel="icon" type="image/x-icon" />
     
   </head>
   
