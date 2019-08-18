@@ -90,35 +90,35 @@
                     <br>
                     <form action="process.php" method="post">
                         <p>
-                            <label> Unit Name: </label>
+                            <label> Unit Name: </label><br>
                             <input type="text" id="name" name="name" onblur="this.value=removeSpaces(this.value);" />
                         </p>
                         <p>
-                            <label> Unit Element: </label>
+                            <label> Unit Element: </label><br>
                             <input type="text" id="element" name="element" />
                         </p>
                         <p>
-                            <label> Unit Class: </label>
+                            <label> Unit Class: </label><br>
                             <input type="text" id="class" name="class" />
                         </p>
                         <p>
-                            <label> Unit Zodiac: </label>
+                            <label> Unit Zodiac: </label><br>
                             <input type="text" id="zodiac" name="zodiac" />
                         </p>
                         <p>
-                            <label> Unit Max Attack: </label>
+                            <label> Unit Max Attack: </label><br>
                             <input type="text" id="attack" name="attack" />
                         </p>
                         <p>
-                            <label> Unit Max Defense: </label>
+                            <label> Unit Max Defense: </label><br>
                             <input type="text" id="defense" name="defense" />
                         </p>
                         <p>
-                            <label> Unit Max Speed: </label>
+                            <label> Unit Max Speed: </label><br>
                             <input type="text" id="speed" name="speed" />
                         </p>
                         <p>
-                            <label> Unit Max Health: </label>
+                            <label> Unit Max Health: </label><br>
                             <input type="text" id="health" name="health" />
                         </p>
                         <p>
@@ -167,8 +167,6 @@
                         <p>
                             <input type="submit" id="btn2" value="Upload new Image" />
                         </p>
-                        <!--https://www.simonewebdesign.it/how-to-put-online-your-wampserver/-->
-                        <!-- https://www.youtube.com/watch?v=1NiJcZrPHvA -->
                     </form>
                 </div>
             </div>

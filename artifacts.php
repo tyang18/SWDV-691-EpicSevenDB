@@ -103,27 +103,13 @@
                             <td style="vertical-align: middle;" <?php echo $column == 'ArtifactClass' ? $add_class : ''; ?> class="imageSwitch"><?php echo $row['ArtifactClass']; ?></td>
                             <td style="vertical-align: middle;" <?php echo $column == 'ArtifactGrade' ? $add_class : ''; ?>><?php echo $row['ArtifactGrade']; ?></td>
                         </tr>
-
-                        <script>
-                        $().ready(function () {
-                            $('.imageSwitch').each(function () {
-                                string = $(this).text('Fire');
-                                $(this).html('<img src="img/fire.png" alt="' + Fire + '" />');
-                            });
-                        });
-                        //https://onelittledesigner.com/rapidweaver/rapidweaver-snippets/replacing-text-with-an-image-using-jquery/
-                        </script>
-                        
                         <?php endwhile; ?>
-                        
                         <br><br>
-
                     </table>
                     <?php
                     $result->free();
                 }
                 ?>
-
             </div>
         </div>
         </div>  

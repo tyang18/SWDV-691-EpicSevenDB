@@ -105,27 +105,13 @@
                             <td style="vertical-align: middle;" <?php echo $column == 'UnitClass' ? $add_class : ''; ?>><?php echo $row['UnitClass']; ?></td>
                             <td style="vertical-align: middle;" <?php echo $column == 'UnitZodiac' ? $add_class : ''; ?>><?php echo $row['UnitZodiac']; ?></td>
                         </tr>
-
-                        <script>
-                        $().ready(function () {
-                            $('.imageSwitch').each(function () {
-                                string = $(this).text('Fire');
-                                $(this).html('<img src="img/fire.png" alt="' + Fire + '" />');
-                            });
-                        });
-                        //https://onelittledesigner.com/rapidweaver/rapidweaver-snippets/replacing-text-with-an-image-using-jquery/
-                        </script>
-                        
                         <?php endwhile; ?>
-                        
                         <br><br>
-
                     </table>
                     <?php
                     $result->free();
                 }
                 ?>
-
             </div>
         </div>
         </div>  

@@ -135,7 +135,7 @@
                             $column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
                             $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
 
-                            $result = $mysqli->query('SELECT tblunits.UnitID, tblportraits.PortraitImage, tblunits.UnitName, tblunits.UnitElement, tblunits.UnitClass, tblunits.UnitZodiac FROM tblunits INNER JOIN tblportraits ON tblunits.UnitID=tblportraits.UnitID LIMIT 1')
+                            $result = $mysqli->query('SELECT tblunits.UnitID, tblportraits.PortraitImage, tblunits.UnitName, tblunits.UnitElement, tblunits.UnitClass, tblunits.UnitZodiac FROM tblunits INNER JOIN tblportraits ON tblunits.UnitID=tblportraits.UnitID WHERE tblunits.UnitID = 9 LIMIT 1')
 
                         ?>
                                 
