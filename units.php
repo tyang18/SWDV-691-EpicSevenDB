@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Epic Seven DB</title>
+    <title>Units</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -37,19 +37,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gameplay.html">Gameplay</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link active" href="units.html">Units</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="artifacts.html">Artifacts</a>
+                    <a class="nav-link" href="artifacts.php">Artifacts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tier.html">Tier</a>
+                    <a class="nav-link" href="insert.php">Insert</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="other.html">Other</a>
@@ -62,15 +59,6 @@
     <!--Banner Image-->
     <div class="banner-image" role="img">
         <img class="center-fit" src="img/banner.png">
-    </div>
-
-    <!--Download Link-->
-    <div class="container-fluid">
-        <div class="row jumbotron text-center">
-            <div class="col-12">
-                <a href="https://itunes.apple.com/us/app/epic-seven/id1322399438?mt=8"><button type="button" class="btn btn-outline-secondary">Install the Game</button></a>
-            </div>
-        </div>
     </div>
 
     <!--For now, I will be manually adding images, and information about units-->
@@ -114,7 +102,7 @@
                         <?php while ($row = $result->fetch_assoc()):?>
                         <tr>
                             <td <?php echo $column == 'PortraitImage' ? $add_class : ''; ?>><?php echo '<img src="data:image/jpeg;base64, '.base64_encode( $row['PortraitImage']).'"/>'; ?></td>
-                            <td style="vertical-align: middle;" <?php echo $column == 'UnitName' ? $add_class : ''; ?>><a href="unit_<?php echo $row['UnitName']; ?>.html"><?php echo $row['UnitName']; ?></a></td>
+                            <td style="vertical-align: middle;" <?php echo $column == 'UnitName' ? $add_class : ''; ?>><a href="unit_<?php echo $row['UnitName']; ?>.php"><?php echo $row['UnitName']; ?></a></td>
                             <td style="vertical-align: middle;" <?php echo $column == 'UnitElement' ? $add_class : ''; ?> class="imageSwitch"><?php echo $row['UnitElement']; ?></td>
                             <td style="vertical-align: middle;" <?php echo $column == 'UnitClass' ? $add_class : ''; ?>><?php echo $row['UnitClass']; ?></td>
                             <td style="vertical-align: middle;" <?php echo $column == 'UnitZodiac' ? $add_class : ''; ?>><?php echo $row['UnitZodiac']; ?></td>
@@ -143,97 +131,6 @@
             </div>
         </div>
         </div>  
-    </div>
-    </div>
-
-
-    <br>
-
-
-    <hr class="my-4">
-
-    <div class="container-fluid">
-    <div class="row main-window">
-    <!--About Section-->
-        <div class="container-fluid">
-        <div class="row main">
-            <div class="col-12">
-                
-                <script language="javascript" type="text/javascript">
-                    function removeSpaces(string) {
-                    return string.split(' ').join('');
-                    }
-                </script>
-
-                <!--Main container-->
-                <h2>Insert Unit</h2>
-                <br>
-                <div id="form">
-                    <form action="process.php" method="post">
-                        <p>
-                            <label> Unit Name: </label>
-                            <input type="text" id="name" name="name" onblur="this.value=removeSpaces(this.value);" />
-                        </p>
-                        <p>
-                            <label> Unit Element: </label>
-                            <input type="text" id="element" name="element" />
-                        </p>
-                        <p>
-                            <label> Unit Class: </label>
-                            <input type="text" id="class" name="class" />
-                        </p>
-                        <p>
-                            <label> Unit Zodiac: </label>
-                            <input type="text" id="zodiac" name="zodiac" />
-                        </p>
-                        <p>
-                            <label> Unit Max Attack: </label>
-                            <input type="text" id="attack" name="attack" />
-                        </p>
-                        <p>
-                            <label> Unit Max Defense: </label>
-                            <input type="text" id="defense" name="defense" />
-                        </p>
-                        <p>
-                            <label> Unit Max Speed: </label>
-                            <input type="text" id="speed" name="speed" />
-                        </p>
-                        <p>
-                            <label> Unit Max Health: </label>
-                            <input type="text" id="health" name="health" />
-                        </p>
-                        <p>
-                            <input type="submit" id="btn" value="Add new units" />
-                        </p>
-                    </form>
-                </div>
-
-                <br><br>
-
-                <h2>Insert Unit Portrait</h2>
-                <br>
-                <div id="form2">
-                    <form action="process2.php" method="POST" enctype="multipart/form-data">
-                        <p>
-                            <label> Unit Name: </label>
-                            <input type="text" id="name" name="name" onblur="this.value=removeSpaces(this.value);" />
-                        </p>
-                        <p>
-                            <label class="btn btn-primary btn-file"> 
-                                Select Image Portrait
-                                <input type="file" id="image" name="image" style="display:none" />
-                            </label>
-                        </p>
-                        <p>
-                            <input type="submit" id="btn2" value="Upload new Image" />
-                        </p>
-                        <!--https://www.simonewebdesign.it/how-to-put-online-your-wampserver/-->
-                        <!-- https://www.youtube.com/watch?v=1NiJcZrPHvA -->
-                    </form>
-                </div>
-            </div>
-        </div>
-        </div>
     </div>
     </div>
     <br>

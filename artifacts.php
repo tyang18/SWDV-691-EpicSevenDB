@@ -42,7 +42,7 @@
                     <a class="nav-link" href="units.php">Units</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="artifacts.html">Artifacts</a>
+                    <a class="nav-link" href="artifacts.php">Artifacts</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="insert.php">Insert</a>
@@ -60,14 +60,6 @@
         <img class="center-fit" src="img/banner.png">
     </div>
 
-    <!--Download link-->
-    <div class="container-fluid">
-    <div class="row jumbotron text-center">
-        <div class="col-12">
-            <a href="https://itunes.apple.com/us/app/epic-seven/id1322399438?mt=8"><button type="button" class="btn btn-outline-secondary">Install the Game</button></a>
-        </div>
-    </div>
-    </div>
 
     <!--For now, I will be manually adding images, and information about units-->
     <!--In the future, I will add a db for further filtering and unit search-->
