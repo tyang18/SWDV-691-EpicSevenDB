@@ -40,7 +40,7 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link active" href="units.html">Units</a>
+                    <a class="nav-link active" href="units.php">Units</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="artifacts.php">Artifacts</a>
@@ -74,8 +74,6 @@
 
                 <!--Main container-->
                 <h2>Unit Information</h2>
-
-                <!------------------------------#######################################------------------------------------------->
 
                 <?php
                 $mysqli = mysqli_connect("localhost", "root", "", "epicseven");

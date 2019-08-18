@@ -60,114 +60,70 @@
         <img class="center-fit" src="img/banner.png">
     </div>
 
-
     <!--For now, I will be manually adding images, and information about units-->
     <!--In the future, I will add a db for further filtering and unit search-->
     <!--Main Section 1-->
     <div class="container-fluid">
     <div class="row main-window">
-    
+
+
         <!--About Section-->
         <div class="container-fluid">
         <div class="row main">
             <div class="col-12">
+
                 <!--Main container-->
                 <h2>Artifact Information</h2>
-                <table class="table table-hover table-bordered">
-                    <!--Hides the left 3 column upon smaller window-->
-                    
-                    <thead>
-                        <!--Row 1-->
-                        <tr>
-                        <th scope="col">Icon</th>
-                        <th scope="col">Name</th>
-                        <th scope="col" class="d-none d-sm-table-cell">Class Specific</th>
-                        <th scope="col" class="d-none d-sm-table-cell">Star Grade</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!--Row 2-->
-                        <tr>
-                        <th scope="row">
-                            <a class="nav-link" href="artifact_celestine.html"><img src="img/celestine.png" class="img-fluid"></a>
-                        </th>
-                        <td>
-                                <a class="nav-link" href="artifact_celestine.html">Celestine</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/soulweaver.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/5star.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        </tr>
+
+                <?php
+                $mysqli = mysqli_connect("localhost", "root", "", "epicseven");
+
+                $columns = array('ArtIcon','ArtifactName','ArtifactClass', 'ArtifactGrade');
+                $column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
+                $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
+
+
+                if ($result = $mysqli->query('SELECT tblartimage.ArtIcon, ArtifactName, ArtifactClass, ArtifactGrade FROM tblartifacts INNER JOIN tblartimage ON tblartifacts.ArtifactID=tblartimage.ArtifactID ORDER BY ' .  $column . ' ' . $sort_order)) {
+                    $up_or_down = str_replace(array('ASC','DESC'), array('up','down'), $sort_order); 
+                    $asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc';
+                    $add_class = ' class="highlight"';
+                    ?>
                         
-                        <!--Row 3-->
+                    <table class="table table-hover table-bordered table-light" role="table">
                         <tr>
-                        <th scope="row">
-                            <a class="nav-link" href="artifact_durandal.html"><img src="img/durandal.png" class="img-fluid"></a>
-                        </th>
-                        <td>
-                                <a class="nav-link" href="artifact_durandal.html">Durandal</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/warrior.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/5star.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
+                            <th>Unit Icon </th>
+                            <th><a href="artifacts.php?column=ArtifactName&order=<?php echo $asc_or_desc; ?>" >Name <i class="fas fa-sort <?php echo $column == 'ArtifactName' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                            <th><a href="artifacts.php?column=ArtifactClass&order=<?php echo $asc_or_desc; ?>" >Element <i class="fas fa-sort <?php echo $column == 'ArtifactClass' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                            <th><a href="artifacts.php?column=ArtifactGrade&order=<?php echo $asc_or_desc; ?>" >Class <i class="fas fa-sort <?php echo $column == 'ArtifactGrade' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                        </tr>
+                        <?php while ($row = $result->fetch_assoc()):?>
+                        <tr>
+                            <td <?php echo $column == 'ArtIcon' ? $add_class : ''; ?>><?php echo '<img src="data:image/jpeg;base64, '.base64_encode( $row['ArtIcon']).'"/>'; ?></td>
+                            <td style="vertical-align: middle;" <?php echo $column == 'ArtifactName' ? $add_class : ''; ?>><a href="artifact_<?php echo $row['ArtifactName']; ?>.php"><?php echo $row['ArtifactName']; ?></a></td>
+                            <td style="vertical-align: middle;" <?php echo $column == 'ArtifactClass' ? $add_class : ''; ?> class="imageSwitch"><?php echo $row['ArtifactClass']; ?></td>
+                            <td style="vertical-align: middle;" <?php echo $column == 'ArtifactGrade' ? $add_class : ''; ?>><?php echo $row['ArtifactGrade']; ?></td>
                         </tr>
 
-                        <!--Row 4-->
-                        <tr>
-                        <th scope="row">
-                            <a class="nav-link" href="artifact_rnl.html"><img src="img/rnl.png" class="img-fluid"></a>
-                        </th>
-                        <td>
-                            <a class="nav-link" href="artifact_rnl.html">Rhiana and Luciel</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/thief.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/5star.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        </tr>
-
-                        <!--Row 5-->
-                        <tr>
-                        <th scope="row">
-                            <a class="nav-link" href="artifact_swordofezera.html"><img src="img/swordofezera.png" class="img-fluid"></a>
-                        </th>
-                        <td>
-                            <a class="nav-link" href="artifact_swordofezera.html">Sword of Ezera</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/knight.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/5star.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        </tr>
-
-                        <!--Row 6-->
-                        <tr>
-                        <th scope="row">
-                                <a class="nav-link" href="artifact_timematter.html"><img src="img/timematter.png" class="img-fluid"></a>
-                        </th>
-                        <td>
-                            <a class="nav-link" href="artifact_timematter.html">Time Matter</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/mage.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        <td class="d-none d-sm-table-cell">
-                            <img src="img/5star.PNG" class="img-fluid d-none d-sm-block">
-                        </td>
-                        </tr>
+                        <script>
+                        $().ready(function () {
+                            $('.imageSwitch').each(function () {
+                                string = $(this).text('Fire');
+                                $(this).html('<img src="img/fire.png" alt="' + Fire + '" />');
+                            });
+                        });
+                        //https://onelittledesigner.com/rapidweaver/rapidweaver-snippets/replacing-text-with-an-image-using-jquery/
+                        </script>
                         
-                    </tbody>
-                </table>
+                        <?php endwhile; ?>
+                        
+                        <br><br>
+
+                    </table>
+                    <?php
+                    $result->free();
+                }
+                ?>
+
             </div>
         </div>
         </div>  

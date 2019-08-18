@@ -37,19 +37,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gameplay.html">Gameplay</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link active" href="units.html">Units</a>
+                    <a class="nav-link active" href="units.php">Units</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="artifacts.html">Artifacts</a>
+                    <a class="nav-link" href="artifacts.php">Artifacts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tier.html">Tier</a>
+                    <a class="nav-link" href="insert.php">Insert</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="other.html">Other</a>
@@ -104,7 +101,7 @@
 
                             $columns = array('UnitID','UnitClass','UnitElement','UnitZodiac', 'UnitGrade');
 
-                            $result = $mysqli->query('SELECT UnitID, UnitClass, UnitElement, UnitZodiac, UnitGrade FROM tblunits WHERE UnitID = 7')
+                            $result = $mysqli->query('SELECT UnitID, UnitClass, UnitElement, UnitZodiac, UnitGrade FROM tblunits WHERE UnitID = 7');
                             
                             ?>
                                     
@@ -125,7 +122,6 @@
                                         <td style="vertical-align: middle;"><?php echo $row['UnitZodiac']; ?></td>
                                     </tr>
                                         <?php endwhile; ?>
-                                    <br><br>
                                 </table>
                                 <?php
                                 $result->free();
@@ -159,7 +155,6 @@
                                     <td style="vertical-align: middle;"><?php echo $row['UnitHealth']; ?></td>
                                 </tr>
                                     <?php endwhile; ?>
-                                <br><br>
                             </table>
                             <?php
                             $result->free();
@@ -207,7 +202,7 @@
                                 </td>
                             </tr>
                             <?php endwhile; ?>
-                            <br><br>
+                
                         </table>
                         <?php
                         $result->free();
