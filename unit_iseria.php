@@ -85,13 +85,13 @@
                         <div class="col-sm-12 col-md-4 col-lg-3">
                             <p>
                             <!--Avatar Image-->
-                            <img src="img/ken-avatar.png" class="img-fluid mx-auto d-block" role="img">
+                            <img src="img/iseria-avatar.png" class="img-fluid mx-auto d-block" role="img">
                             </p>    
 
                             <h4>Background</h4>
 
                             <p>
-                                Born an orphan, Ken has faced many hardships in his life, but manages to maintain a bright and optimistic personality. He believes the only way to survive is through strength, and dedicates his life to training and always admires the strong.
+                                Second-in-Command of the Order of the Sword, Iseria is an Elf unable to return to her ancestral home of Dun Blyraia due to some reason. Known as the Knight of White Flowers, she has a calm and solemn personality.
                             </p>
 
                         </div>
@@ -104,7 +104,7 @@
 
                             $columns = array('UnitID','UnitClass','UnitElement','UnitZodiac', 'UnitGrade');
 
-                            $result = $mysqli->query('SELECT UnitID, UnitClass, UnitElement, UnitZodiac, UnitGrade FROM tblunits WHERE UnitID = 1')
+                            $result = $mysqli->query('SELECT UnitID, UnitClass, UnitElement, UnitZodiac, UnitGrade FROM tblunits WHERE UnitID = 3')
                             
                             ?>
                                     
@@ -138,7 +138,7 @@
                         $columns = array('UnitID','UnitAttack','UnitDefense','UnitSpeed', 'UnitHealth', 'UnitGrade');
                     
 
-                        $result = $mysqli->query('SELECT UnitID, UnitAttack, UnitDefense, UnitSpeed, UnitHealth, UnitGrade FROM tblunits WHERE UnitID = 1')
+                        $result = $mysqli->query('SELECT UnitID, UnitAttack, UnitDefense, UnitSpeed, UnitHealth, UnitGrade FROM tblunits WHERE UnitID = 3')
                         
                         ?>
                                 
@@ -176,7 +176,7 @@
                     $columns = array('SkillID','Skill1Name','Skill2Name','Skill3Name','Skill1Icon','Skill2Icon','Skill3Icon','Skill1Info','Skill2Info','Skill3Info');
                 
 
-                    $result = $mysqli->query('SELECT SkillID, Skill1Name, Skill2Name, Skill3Name, Skill1Icon, Skill2Icon, Skill3Icon, Skill1Info, Skill2Info, Skill3Info FROM tblskills WHERE SkillID = 1')
+                    $result = $mysqli->query('SELECT SkillID, Skill1Name, Skill2Name, Skill3Name, Skill1Icon, Skill2Icon, Skill3Icon, Skill1Info, Skill2Info, Skill3Info FROM tblskills WHERE SkillID = 3')
                     
                     ?>
                             

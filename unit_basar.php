@@ -85,13 +85,13 @@
                         <div class="col-sm-12 col-md-4 col-lg-3">
                             <p>
                             <!--Avatar Image-->
-                            <img src="img/ken-avatar.png" class="img-fluid mx-auto d-block" role="img">
+                            <img src="img/basar-avatar.png" class="img-fluid mx-auto d-block" role="img">
                             </p>    
 
                             <h4>Background</h4>
 
                             <p>
-                                Born an orphan, Ken has faced many hardships in his life, but manages to maintain a bright and optimistic personality. He believes the only way to survive is through strength, and dedicates his life to training and always admires the strong.
+                                Leader of one of the six biggest merchant guilds in Savara, Basar is a seller of poisons and explosives. A genius of business, at a young age he has gained enough power to compare with the great Afih Merchant Guild.
                             </p>
 
                         </div>
@@ -104,7 +104,7 @@
 
                             $columns = array('UnitID','UnitClass','UnitElement','UnitZodiac', 'UnitGrade');
 
-                            $result = $mysqli->query('SELECT UnitID, UnitClass, UnitElement, UnitZodiac, UnitGrade FROM tblunits WHERE UnitID = 1')
+                            $result = $mysqli->query('SELECT UnitID, UnitClass, UnitElement, UnitZodiac, UnitGrade FROM tblunits WHERE UnitID = 11')
                             
                             ?>
                                     
@@ -138,7 +138,7 @@
                         $columns = array('UnitID','UnitAttack','UnitDefense','UnitSpeed', 'UnitHealth', 'UnitGrade');
                     
 
-                        $result = $mysqli->query('SELECT UnitID, UnitAttack, UnitDefense, UnitSpeed, UnitHealth, UnitGrade FROM tblunits WHERE UnitID = 1')
+                        $result = $mysqli->query('SELECT UnitID, UnitAttack, UnitDefense, UnitSpeed, UnitHealth, UnitGrade FROM tblunits WHERE UnitID = 11')
                         
                         ?>
                                 
@@ -176,7 +176,7 @@
                     $columns = array('SkillID','Skill1Name','Skill2Name','Skill3Name','Skill1Icon','Skill2Icon','Skill3Icon','Skill1Info','Skill2Info','Skill3Info');
                 
 
-                    $result = $mysqli->query('SELECT SkillID, Skill1Name, Skill2Name, Skill3Name, Skill1Icon, Skill2Icon, Skill3Icon, Skill1Info, Skill2Info, Skill3Info FROM tblskills WHERE SkillID = 1')
+                    $result = $mysqli->query('SELECT SkillID, Skill1Name, Skill2Name, Skill3Name, Skill1Icon, Skill2Icon, Skill3Icon, Skill1Info, Skill2Info, Skill3Info FROM tblskills WHERE SkillID = 11')
                     
                     ?>
                             
