@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/mustache.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="/e7icon.ico" rel="icon" type="image/x-icon" />
   </head>
   
   <body>

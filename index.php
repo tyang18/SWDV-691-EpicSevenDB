@@ -18,7 +18,7 @@
     <script type="text/javascript" src="js/mustache.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
-    <link href="/YOUR_PATH/e7icon.ico" rel="icon" type="image/x-icon" />
+    <link href="/e7icon.ico" rel="icon" type="image/x-icon" />
     
   </head>
   
@@ -154,7 +154,7 @@
         
                                 <tr>
                                     <td <?php echo $column == 'PortraitImage'; ?>><?php echo '<img src="data:image/jpeg;base64, '.base64_encode( $row['PortraitImage']).'"/>'; ?></td>
-                                    <td style="vertical-align: middle;" <?php echo $column == 'UnitName'; ?>><a href="unit_<?php echo $row['UnitName']; ?>.html"><?php echo $row['UnitName']; ?></a></td>
+                                    <td style="vertical-align: middle;" <?php echo $column == 'UnitName'; ?>><a href="unit_<?php echo $row['UnitName']; ?>.php"><?php echo $row['UnitName']; ?></a></td>
                                     <td style="vertical-align: middle;" <?php echo $column == 'UnitElement'; ?> class="imageSwitch"><?php echo $row['UnitElement']; ?></td>
                                     <td style="vertical-align: middle;" <?php echo $column == 'UnitClass'; ?>><?php echo $row['UnitClass']; ?></td>
                                     <td style="vertical-align: middle;" <?php echo $column == 'UnitZodiac'; ?>><?php echo $row['UnitZodiac']; ?></td>
