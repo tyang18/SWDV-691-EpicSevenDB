@@ -39,7 +39,9 @@ Unit Name: Chloe
 
 Unit ID: 13
 
-**Select the image file: "chloe-portrait.png"
+Image: https://assets.epicsevendb.com/hero/chloe/icon.png
+Save this image as **"chloe-portrait.png"**
+
 
 
 
