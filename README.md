@@ -5,6 +5,46 @@ Project website is written in HTML and PHP utilizing CSS, Javascript and Mustach
 
 **Website:** http://epicsevendb.tk/
 
+
+## Professor Testing:
+Go to the Inserts page and fill in the following information to populate the table. 
+
+Without an image, the table won't populate. 
+Populate Unit information and click the button first. Then insert the image. 
+
+### Example Info:
+Unit Name: Chloe
+
+Unit Element: Ice
+
+Unit Class: Warrior
+
+Unit Zodiac: Leo
+
+Unit Max Attack: 456
+
+Unit Max Defense: 258
+
+Unit Max Speed: 106
+
+Unit Max Health: 4586
+
+Unit Lore: 
+
+A doll who is very simple and cheerful. Uninterested in trivial details, she almost forgot the fact she herself is a doll. She had a special skill for assassinating people on request, but life became a little complicated as she wanders around as she wills.
+
+
+## Example Image:
+Unit Name: Chloe
+
+Unit ID: 13
+
+**Select the image file: "chloe-portrait.png"
+
+
+
+
+
 ## Design Folder Navigation
 
 ### DB & Service Layer Folder
